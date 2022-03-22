@@ -1,0 +1,29 @@
+<h1>Welcome to Angular Application</h1>
+<ul>
+  <li *ngFor="let fr of fruits">{{fr}}</li>
+</ul>
+<app-contact (addNewFruit)="addFruit($event)"></app-contact>
+<h3>The sum of  {{a}} and {{b}} is: {{c}}</h3>
+<p>
+  <input type="text" [(ngModel)]="a" placeholder="Enter first number" /> | <input type="text" [(ngModel)]="b" placeholder="Enter second number" /> <button (click)="sum()">Sum</button>
+</p>
+
+<p><input type="text" [(ngModel)]="salary" placeholder="Enter Salary" /></p>
+
+<h4>List of Cities</h4>
+<ul>
+  <li *ngFor="let city of cities">{{city}}</li>
+</ul>
+
+<table>
+  <tr>
+    <td>Name</td> <td>Department</td> <td>Salary</td>
+  </tr>
+  <tr *ngFor="let e of employees">
+    <td>{{e.name}}</td> <td>{{e.department}}</td> <td>{{e.salary}}</td>
+  </tr>
+</table>
+<p>{{num1}}</p>
+<p><input type="text" (keyup)="changeVal($event)" /></p>
+
+<app-home [name]="childName"></app-home>
